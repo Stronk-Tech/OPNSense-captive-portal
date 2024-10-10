@@ -208,10 +208,6 @@ $(document).ready(function() {
 			});
 		}
 
-		if (typeof settings.logo !== 'undefined' && settings.logo.length) {
-			$('#logo').html('<img class="brand-logo" src="' + settings.logo + '" height="150" width="150">');
-		}
-
 		lang = ((navigator.language || navigator.userLanguage).substring(0,2)).toLowerCase();
 
 		if (getCookie('lang')) lang = getCookie('lang');

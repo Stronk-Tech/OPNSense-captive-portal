@@ -115,6 +115,9 @@ a, a:visited, a:hover, a:focus {
 .using-mouse::-moz-focus-inner {
 	border: 0;
 }
+.rules {
+	color: var(--color_secondary, initial);
+}
 .rules > p {
 	margin-top: 1em;
 	margin-bottom: 0.5em;
@@ -668,7 +671,7 @@ label > input[type="checkbox"]:not(old) + span:not([id]):not([class]), label > i
 	height: 22px !important;
 	margin: 0.25em 0.5em 0.25em 0;
 	border: 0.0625em solid rgb(192,192,192);
-	background: rgb(224,224,224);
+	background: var(--input_field_bg, transparent);
 	vertical-align: bottom;
 	box-sizing: border-box;
 	cursor: pointer;
@@ -866,6 +869,9 @@ canvas {
 	position: absolute;
 	z-index: 1;
 }
+.cpModal {
+	background-color: var(--bg_alternate, initial);
+}
 .cpModal .solution-title {
 	margin-top: 10px;
 	color: var(--color_primary, initial);
@@ -910,23 +916,23 @@ canvas {
 .cpModal ul:not(.numeric):not(.none-style) li:before {
 	content: "\02022";
 	font-size: 24px;
-	color: var(--link);
+	color: var(--button_bg);
 }
 .cpModal ul:not(.numeric):not(.none-style) li:hover:before {
-	color: var(--link_hover, initial);
+	color: var(--button_hover_bg, initial);
 	font-size: 20px;
 	content: "\026AC";
 }
 .cpModal ol:not(.none-style) li:before,
 .cpModal ul.numeric:not(.none-style) li:before {
 	content: counter(counter);
-	background: var(--link, transparent);
+	background: var(--button_bg, transparent);
 	color: var(--color_secondary, initial);
 	border-radius: 50%;
 }
 .cpModal ol:not(.none-style) li:hover:before,
 .cpModal ul.numeric:not(.none-style) li:hover:before {
-	background: var(--link_hover, transparent);
+	background: var(--button_hover_bg, transparent);
 }
 .cpModal ol li.tel:before,
 .cpModal ul li.tel:before {
